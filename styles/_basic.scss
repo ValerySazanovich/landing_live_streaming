@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 * {
    box-sizing: border-box;
 }
@@ -5,4 +7,24 @@
 body {
    font-family: 'Roboto', sans-serif;
    margin: 0;
+   background-color: v.$color_blue;
+}
+
+h1,h2,h3,h4,h5,h6, ul, p, button {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+   color: unset;
+}
+
+li {
+   list-style: none;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
 }
