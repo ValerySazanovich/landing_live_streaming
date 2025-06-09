@@ -52,7 +52,7 @@
       }
 
       &__desc {
-         @include m.font(12px, 300, v.$color_black);
+         @include m.font(11px, 300, v.$color_black);
       }
    }
 }
