@@ -1,16 +1,24 @@
-@use 'variables' as v;
+@use "variables" as v;
 
 * {
    box-sizing: border-box;
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
+   font-family: "Roboto", sans-serif;
    margin: 0;
    background-color: v.$color_blue;
 }
 
-h1,h2,h3,h4,h5,h6, ul, p, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
    margin: 0;
    padding: 0;
 }
@@ -26,6 +34,11 @@ li {
 
 figure {
    margin: 0;
+}
+
+hr {
+   margin: 0;
+   width: 100%;
 }
 
 .container {

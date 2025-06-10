@@ -88,9 +88,7 @@
    height: 41px;
 }
 
-
 @media (max-width: v.$media_md) {
-
    .work {
       &__cards-wrapper {
          grid-template-columns: repeat(2, 1fr);
@@ -105,16 +103,14 @@
    .card--analysis,
    .card--design,
    .card--dev,
-   .card--maintenance, 
+   .card--maintenance,
    .card--testing,
    .card--integration {
       justify-self: center;
    }
 }
 
-
 @media (max-width: v.$media_min) {
-
    .work {
       &__title {
          display: none;
