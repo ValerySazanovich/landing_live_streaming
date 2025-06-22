@@ -89,3 +89,78 @@
       }
 }
 
+
+@media (max-width: v.$media_md) {
+   .nav {
+      &__links,
+      &__covid-wrapper,
+      &__globe-wrapper {
+         display: none;
+      }
+   }
+}
+
+.mobile-navigation {
+   display: none;
+
+   &__burger {
+      @include m.position(absolute, 10, -1, top, right, 10px, 20px);
+   }
+
+   &__burger-icon {
+      width: 33px;
+      height: 22px;
+      stroke: v.$color_white;
+      @extend %hover-black-icon;
+   }
+
+   &__toggler {
+      display: none;
+
+      &:checked + .nav-mob {
+         translate: 0;
+      }
+   }
+
+   &__menu {
+   }
+
+   &__close {
+      @include m.position(absolute, 10, -1, top, right, 15px, 25px);
+   }
+
+   &__close-icon {
+      width: 25px;
+      height: 22px;
+      stroke: v.$color_white;
+      @extend %hover-black-icon;
+   }
+
+   @media (max-width: v.$media_md) {
+      display: block;
+   }
+
+   .nav-mob {
+      padding: 100px 70px 0;
+      // height: 100vh;
+      @include m.position(fixed, 999, 0);
+      background-color: color.adjust(v.$color_black, $alpha: -0.5);
+      backdrop-filter: blur(10px);
+      translate: 100% 0;
+      transition: translate .22s;
+
+
+      &__list {
+         @include m.d-flex(start, start, nowrap, column, 0, 20px)
+      }
+   
+      &__list-item {
+      }
+   
+      &__list-item-link {
+         @include m.font(36px, 400, v.$color_white);
+         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+   }
+   
+}
